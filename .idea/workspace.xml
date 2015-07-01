@@ -1,83 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ae12548-3b5c-4ebe-acaf-cb626a34b3bf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/touch/apple-touch-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/touch/apple-touch-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/core-component-page/bowager-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/build.unity3d" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/touch/chrome-touch-icon-192x192.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/touch/chrome-touch-icon-192x192.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/touch/chrome-touch-icon-192x192.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/touch/icon-128x128.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/touch/icon-128x128.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/touch/icon-128x128.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/icons/icons-hinted.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/icons/icons.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/icons/icons.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/icons/icons.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/icons/icons.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/touch/ms-icon-144x144.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/touch/ms-icon-144x144.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/touch/ms-touch-icon-144x144-precomposed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/touch/ms-touch-icon-144x144-precomposed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/images/touch/ms-touch-icon-144x144-precomposed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/icons/placeholder--medium.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/icons/placeholder--small.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/icons/placeholder--wide.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/play-aqua.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/play-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/play-darkcyan.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/play-green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/play-pink.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/play-red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/play-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/twitter-button/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/core-component-page/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/twitter-button/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/UnityObject2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/core-component-page/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/twitter-button/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/build.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/core-component-page/core-component-page.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/core-component-page/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/hamburger.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/images/icons/icons.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/core-component-page/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/twitter-button/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/dist/styles/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/elements/my-game/my-game.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/elements/my-game/my-game.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/twitter-button/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/precache.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/twitter-button/dist/twitter-button.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/twitter-button/src/twitter-button.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/bower_components/unity-web-player/unity-web-player.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/elements/my-greeting/my-greeting.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/elements/my-list/my-list.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/elements/my-greeting/my-greeting.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/elements/my-list/my-list.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/elements/elements.html" afterPath="$PROJECT_DIR$/app/elements/elements.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/elements/elements.html" afterPath="$PROJECT_DIR$/dist/elements/elements.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/elements/elements.vulcanized.html" afterPath="$PROJECT_DIR$/dist/elements/elements.vulcanized.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+    <list default="true" id="7ae12548-3b5c-4ebe-acaf-cb626a34b3bf" name="Default" comment="initial commit">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/matus.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/polymer_starter_node_modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/survival-shooter-multiplayer-web.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/webResources.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.css" afterPath="$PROJECT_DIR$/app/styles/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/styles/main.css" afterPath="$PROJECT_DIR$/dist/styles/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/elements/routing.html" afterPath="$PROJECT_DIR$/app/elements/routing.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/elements/routing.html" afterPath="$PROJECT_DIR$/dist/elements/routing.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/sw-import.js" afterPath="$PROJECT_DIR$/app/sw-import.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/sw-import.js" afterPath="$PROJECT_DIR$/dist/sw-import.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bower_components/webcomponentsjs/webcomponents-lite.min.js" afterPath="$PROJECT_DIR$/dist/bower_components/webcomponentsjs/webcomponents-lite.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="polymer-starter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,11 +37,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34288865">
-              <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+            <state vertical-scroll-proportion="-11.346154">
+              <caret line="99" column="10" selection-start-line="99" selection-start-column="10" selection-end-line="99" selection-end-column="10" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#paper-material#0;n#section#0;n#paper-header-panel#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.5862069">
+              <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.12754555">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -113,16 +77,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bower.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -143,16 +97,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-3.2692308">
               <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="my-greeting-basic.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/test/my-greeting-basic.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -211,7 +155,6 @@
         <option value="$PROJECT_DIR$/app/index1.html" />
         <option value="$PROJECT_DIR$/app/images/github.svg" />
         <option value="$PROJECT_DIR$/app/styles/app-theme.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/dist/index.html" />
         <option value="$PROJECT_DIR$/app/sw-import.js" />
         <option value="$PROJECT_DIR$/index.html" />
@@ -226,6 +169,8 @@
         <option value="$PROJECT_DIR$/app/elements/my-game/my-game.html" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -500,6 +445,13 @@
       <option name="number" value="Default" />
       <updated>1435656208249</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1435756353157</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1435756353157</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -508,6 +460,7 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="SvgViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917964" sideWeight="0.503642" order="8" side_tool="false" content_ui="tabs" />
@@ -521,7 +474,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24494143" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -541,6 +493,12 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -550,7 +508,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#paper-material#0;n#section#0;n#paper-header-panel#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -614,7 +574,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#paper-material#0;n#section#0;n#paper-header-panel#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -622,6 +584,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -671,16 +634,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="122" column="37" selection-start-line="122" selection-start-column="37" selection-end-line="122" selection-end-column="37" />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/paper-drawer-panel/paper-drawer-panel.html">
@@ -755,14 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Unity Projects/test2/Build/multiplayer/Release/UnityConfig.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -781,6 +726,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -876,8 +822,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34288865">
-          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        <state vertical-scroll-proportion="-11.346154">
+          <caret line="99" column="10" selection-start-line="99" selection-start-column="10" selection-end-line="99" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#paper-material#0;n#section#0;n#paper-header-panel#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5862069">
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12754555">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
