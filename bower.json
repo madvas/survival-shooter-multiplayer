@@ -6,7 +6,14 @@
     "paper-elements": "PolymerElements/paper-elements#1.0.1",
     "platinum-elements": "PolymerElements/platinum-elements#1.0.1",
     "neon-elements": "PolymerElements/neon-elements#1.0.0",
-    "page": "visionmedia/page.js#~1.6.3"
+    "page": "visionmedia/page.js#~1.6.3",
+    "unity-web-player": "*",
+    "twitter-button": "~0.2.1"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "resolutions": {
+    "polymer": "^1.0.0",
+    "webcomponentsjs": "^0.7.2",
+    "font-roboto": "^1.0.0"
+  }
 }

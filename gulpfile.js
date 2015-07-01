@@ -1,25 +1,25 @@
 /*
-Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-*/
+ Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+ This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+ The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+ Code distributed by Google as part of the polymer project is also
+ subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+ */
 
 'use strict';
 
 // Include Gulp & Tools We'll Use
-var gulp = require('gulp');
-var $ = require('gulp-load-plugins')();
-var del = require('del');
+var gulp        = require('gulp');
+var $           = require('gulp-load-plugins')();
+var del         = require('del');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
-var reload = browserSync.reload;
-var merge = require('merge-stream');
-var path = require('path');
-var fs = require('fs');
-var glob = require('glob');
+var reload      = browserSync.reload;
+var merge       = require('merge-stream');
+var path        = require('path');
+var fs          = require('fs');
+var glob        = require('glob');
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -34,15 +34,15 @@ var AUTOPREFIXER_BROWSERS = [
 ];
 
 var styleTask = function (stylesPath, srcs) {
-  return gulp.src(srcs.map(function(src) {
-      return path.join('app', stylesPath, src);
-    }))
-    .pipe($.changed(stylesPath, {extension: '.css'}))
+  return gulp.src(srcs.map(function (src) {
+    return path.join('app', stylesPath, src);
+  }))
+    .pipe($.changed(stylesPath, {extension : '.css'}))
     .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
     .pipe(gulp.dest('.tmp/' + stylesPath))
     .pipe($.if('*.css', $.cssmin()))
     .pipe(gulp.dest('dist/' + stylesPath))
-    .pipe($.size({title: stylesPath}));
+    .pipe($.size({title : stylesPath}));
 };
 
 // Compile and Automatically Prefix Stylesheets
@@ -57,11 +57,11 @@ gulp.task('elements', function () {
 // Lint JavaScript
 gulp.task('jshint', function () {
   return gulp.src([
-      'app/scripts/**/*.js',
-      'app/elements/**/*.js',
-      'app/elements/**/*.html'
-    ])
-    .pipe(reload({stream: true, once: true}))
+    'app/scripts/**/*.js',
+    'app/elements/**/*.js',
+    'app/elements/**/*.html'
+  ])
+    .pipe(reload({stream : true, once : true}))
     .pipe($.jshint.extract()) // Extract JS from .html files
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
@@ -76,7 +76,7 @@ gulp.task('images', function () {
     //  interlaced: true
     //})))
     .pipe(gulp.dest('dist/images'))
-    .pipe($.size({title: 'images'}));
+    .pipe($.size({title : 'images'}));
 });
 
 // Copy All Files At The Root Level (app)
@@ -86,7 +86,7 @@ gulp.task('copy', function () {
     '!app/test',
     '!app/precache.json'
   ], {
-    dot: true
+    dot : true
   }).pipe(gulp.dest('dist'));
 
   var bower = gulp.src([
@@ -107,26 +107,26 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('dist/elements'));
 
   return merge(app, bower, elements, vulcanized, swBootstrap, swToolbox)
-    .pipe($.size({title: 'copy'}));
+    .pipe($.size({title : 'copy'}));
 });
 
 // Copy Web Fonts To Dist
 gulp.task('fonts', function () {
   return gulp.src(['app/fonts/**'])
     .pipe(gulp.dest('dist/fonts'))
-    .pipe($.size({title: 'fonts'}));
+    .pipe($.size({title : 'fonts'}));
 });
 
 // Scan Your HTML For Assets & Optimize Them
 gulp.task('html', function () {
-  var assets = $.useref.assets({searchPath: ['.tmp', 'app', 'dist']});
+  var assets = $.useref.assets({searchPath : ['.tmp', 'app', 'dist']});
 
   return gulp.src(['app/**/*.html', '!app/{elements,test}/**/*.html'])
     // Replace path for vulcanized assets
     .pipe($.if('*.html', $.replace('elements/elements.html', 'elements/elements.vulcanized.html')))
     .pipe(assets)
     // Concatenate And Minify JavaScript
-    .pipe($.if('*.js', $.uglify({preserveComments: 'some'})))
+    .pipe($.if('*.js', $.uglify({preserveComments : 'some'})))
     // Concatenate And Minify Styles
     // In case you are still using useref build blocks
     .pipe($.if('*.css', $.cssmin()))
@@ -134,13 +134,13 @@ gulp.task('html', function () {
     .pipe($.useref())
     // Minify Any HTML
     .pipe($.if('*.html', $.minifyHtml({
-      quotes: true,
-      empty: true,
-      spare: true
+      quotes : true,
+      empty  : true,
+      spare  : true
     })))
     // Output Files
     .pipe(gulp.dest('dist'))
-    .pipe($.size({title: 'html'}));
+    .pipe($.size({title : 'html'}));
 });
 
 // Vulcanize imports
@@ -149,13 +149,13 @@ gulp.task('vulcanize', function () {
 
   return gulp.src('dist/elements/elements.vulcanized.html')
     .pipe($.vulcanize({
-      dest: DEST_DIR,
-      strip: true,
-      inlineCss: true,
-      inlineScripts: true
+      dest          : DEST_DIR,
+      strip         : true,
+      inlineCss     : true,
+      inlineScripts : true
     }))
     .pipe(gulp.dest(DEST_DIR))
-    .pipe($.size({title: 'vulcanize'}));
+    .pipe($.size({title : 'vulcanize'}));
 });
 
 // Generate a list of files that should be precached when serving from 'dist'.
@@ -163,7 +163,7 @@ gulp.task('vulcanize', function () {
 gulp.task('precache', function (callback) {
   var dir = 'dist';
 
-  glob('{elements,scripts,styles}/**/*.*', {cwd: dir}, function(error, files) {
+  glob('{elements,scripts,styles}/**/*.*', {cwd : dir}, function (error, files) {
     if (error) {
       callback(error);
     } else {
@@ -180,11 +180,11 @@ gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 // Watch Files For Changes & Reload
 gulp.task('serve', ['styles', 'elements', 'images'], function () {
   browserSync({
-    notify: false,
-    snippetOptions: {
-      rule: {
-        match: '<span id="browser-sync-binding"></span>',
-        fn: function (snippet) {
+    notify         : false,
+    snippetOptions : {
+      rule : {
+        match : '<span id="browser-sync-binding"></span>',
+        fn    : function (snippet) {
           return snippet;
         }
       }
@@ -193,10 +193,10 @@ gulp.task('serve', ['styles', 'elements', 'images'], function () {
     // Note: this uses an unsigned certificate which on first access
     //       will present a certificate warning in the browser.
     // https: true,
-    server: {
-      baseDir: ['.tmp', 'app'],
-      routes: {
-        '/bower_components': 'bower_components'
+    server         : {
+      baseDir : ['.tmp', 'app'],
+      routes  : {
+        '/bower_components' : 'bower_components'
       }
     }
   });
@@ -211,11 +211,11 @@ gulp.task('serve', ['styles', 'elements', 'images'], function () {
 // Build and serve the output from the dist build
 gulp.task('serve:dist', ['default'], function () {
   browserSync({
-    notify: false,
-    snippetOptions: {
-      rule: {
-        match: '<span id="browser-sync-binding"></span>',
-        fn: function (snippet) {
+    notify         : false,
+    snippetOptions : {
+      rule : {
+        match : '<span id="browser-sync-binding"></span>',
+        fn    : function (snippet) {
           return snippet;
         }
       }
@@ -224,8 +224,22 @@ gulp.task('serve:dist', ['default'], function () {
     // Note: this uses an unsigned certificate which on first access
     //       will present a certificate warning in the browser.
     // https: true,
-    server: 'dist'
+    server         : ''
   });
+
+  gulp.watch(['app/**/*.html'], ['default']);
+  gulp.watch(['app/styles/**/*.css'], ['default']);
+  //gulp.watch(['app/elements/**/*.css'], ['default', reload]);
+  //gulp.watch(['app/images/**/*'], ['default', reload]);
+});
+
+gulp.task('copy-index-to-root', function () {
+  gulp.src('dist/index.html')
+    .pipe(gulp.dest('./'))
+});
+
+gulp.task('reload', function () {
+  reload();
 });
 
 // Build Production Files, the Default Task
@@ -233,8 +247,8 @@ gulp.task('default', ['clean'], function (cb) {
   runSequence(
     ['copy', 'styles'],
     'elements',
-    ['jshint', 'images', 'fonts', 'html'],
-    'vulcanize', 'precache',
+    ['images', 'fonts', 'html'],
+    'vulcanize', 'precache', 'copy-index-to-root', 'reload',
     cb);
 });
 

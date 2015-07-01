@@ -1,0 +1,309 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name='unity-web-player' attributes='source name width height autoplay background text color playColor'>
+<template>
+
+<style>
+    :host{
+        display:block;
+    }
+    #container {
+        font-family: Helvetica, Verdana, Arial, sans-serif;
+        color: black;
+        text-align: center;
+    }
+    .header {
+        font-weight: 400;
+    }
+    div.content {
+        margin: auto;
+    }
+    #overlay{
+        background: #222c37;
+        opacity : 0.7;
+        position:absolute;
+        z-index:1;
+        cursor: pointer;
+    }
+    #background{
+        background-repeat: no-repeat;
+        background-size:cover;
+        position:absolute;
+        text-align:center;
+    }
+    #play{
+        position: relative;
+        width: 80px;
+        height: 54px;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+        transition: all .2s;
+        opacity:0.6;
+        z-index:10;
+    }
+    #play:hover{
+        opacity:.92;
+    }
+    #info{
+        position: relative;
+        z-index : 10;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+    #description{
+        position: relative;
+        margin:auto;
+        border-bottom: 1px solid white;
+    }
+    .detail{
+        font-weight:300;
+    }
+    div#broken,
+    div#missing {
+        margin: auto;
+        position: relative;
+        top: 50%;
+        width: 193px;
+    }
+    div#broken a,
+    div#missing a {
+        height: 63px;
+        position: relative;
+        top: -31px;
+    }
+    div#broken img,
+    div#missing img {
+        border-width: 0px;
+    }
+    div#broken {
+        display: none;
+    }
+    div#unityPlayer {
+        cursor: default;
+    }
+</style>
+<div id="container">
+    <div class="content">
+        <template if="{{ !autoplay }}">
+        <div id="overlay" on-tap="{{play}}"></div>
+        <div id="background">
+            <div id="info" on-tap="{{play}}">
+                <div id="play" style="background-image: url(images/play-color.png)"></div>
+                <div id="description">
+                    <h2 name="name">{{ name }}</h2>
+                </div>
+                <p class="detail">{{ text }}</p>
+            </div>
+        </div>
+        </template>
+        <div id="unityPlayer">
+            <div id="missing">
+                <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+                    <img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+                </a>
+            </div>
+            <div id="broken">
+                <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
+                    <img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</template>
+<script>
+    Polymer({
+    /**
+    * Set source of unity web player
+    *
+    * @attribute source
+    * @type string
+    * @required
+    */
+      source     : ''
+    /**
+    * Name of the game, will show on middle of screen if `autoplay` is set to false
+    *
+    * @attribute name
+    * @type string
+    * @default ''
+    */
+    , name       : ''
+    /**
+    * Set width of the Unity web player object.
+    *
+    * @attribute width
+    * @type integer
+    * @default 980
+    */
+    , width      : 980
+    /**
+    * Set height of the Unity web player object.
+    *
+    * @attribute width
+    * @type integer
+    * @default 465
+    */
+    , height     : 465
+    /**
+    * Autoplay game, if not, will show a play button on middle of screen.
+    * `On-tap` fires the play function which initializes the unity web player.
+    *
+    * @attribute autoplay
+    * @type boolean
+    * @default true
+    */
+    , autoplay   : true
+    /**
+    * A URL to show a background image when `autoplay` is set to false.
+    *
+    * @attribute background
+    * @type string
+    * @default ''
+    */
+    , background : ''
+    /**
+    * Additional message to show when `autoplay` is set to false
+    *
+    * @attribute text
+    * @type string
+    * @default ''
+    */
+    , text       : ''
+    /**
+    * Color to apply on text 
+    *
+    * @attribute color
+    * @type string
+    * @default black
+    */
+    , color      : 'black'
+    /**
+    * Color of the play button
+    *
+    * Available colors:
+    *
+    * aqua
+    * black
+    * darkcyan
+    * green
+    * pink
+    * red
+    * white
+    *
+    * @attribute playColor
+    * @type string
+    * @default black
+    */
+    , playColor  : 'black'
+    /*
+    * Fires when the element has been fully prepared
+    */
+    , ready      : function(){
+
+        this.$.missing.style.display = "none";
+        this.$.broken.style.display = "none";
+
+        this.setBounds(this.$.unityPlayer);
+        this.setBounds(this.shadowRoot.host);
+
+        if(!this.autoplay) {
+
+            this.setBounds(this.$.overlay);
+            this.setBounds(this.$.background);
+
+            if(this.background)
+                this.$.background.style.backgroundImage = 'url('+this.background+')';
+
+            //for now, replace `color` string to keep the current folder path eg.: `bower_componts/unity-web-player/images/play-black.png`
+            this.$.play.style.backgroundImage = this.$.play.style.backgroundImage.replace('color', this.playColor);
+
+            this.$.info.style.marginTop = this.height / 2-70 + 'px';
+
+            this.$.info.style.color = this.color;
+            this.$.description.style.width = this.name.length * 18 + 'px';
+            this.$.description.style.maxwidth = this.width + 'px';
+            this.$.overlay.style.display = this.background ? 'block' : 'none';
+
+        } else {
+            this.initializeWebPlayer();
+        }
+    }
+    /**
+    *
+    * Set width and height for container divs
+    */
+    , setBounds : function(element){
+        element.style.width  = this.width+'px';
+        element.style.height = this.height+'px';
+    }
+    /**
+    * Fires when user click on play button
+    * only if `autoplay` if set to false.
+    */
+    , play   : function(){
+        this.autoplay = true;
+        this.initializeWebPlayer();
+    }
+    /*
+    * Initialize Unity web player object and start up the game
+    *
+    * Set UnityObject2 constructor and check if
+    * unity web player plugin is instaled on system
+    * and will embed into html, otherwise will show up a missing message
+    * with a link to download the plugin or a crash report.
+    *
+    * reference: http://docs.unity3d.com/Manual/WorkingwithUnityObject.html
+    */
+    , initializeWebPlayer : function(){
+
+        var missing = this.$.missing;
+        var broken  = this.$.broken;
+        var unityPlayer = this.$.unityPlayer;
+
+        var config = {
+            width  : this.width
+          , height : this.height
+          , params : { enableDebugging:"0" }
+        };
+
+        var u = new UnityObject2(config, unityPlayer);
+
+        u.observeProgress(function (progress) {
+            switch(progress.pluginStatus) {
+                case "broken":
+                    broken.querySelector("a").addEventListener("click", function(e){
+                        e.stopPropagation();
+                        e.preventDefault();
+                        u.installPlugin();
+                        return false;
+                    });
+                    broken.style.display = "block";
+                    break;
+                case "missing":
+                    missing.querySelector("a").addEventListener("click", function(e){
+                        e.stopPropagation();
+                        e.preventDefault();
+                        u.installPlugin();
+                        return false;
+                    });
+                    missing.style.display = "block";
+                    break;
+                case "installed":
+                    unityPlayer.removeChild(missing);
+                    break;
+                case "first":
+                    break;
+            }
+        });
+
+        u.initPlugin(unityPlayer, this.source);
+
+        }
+    });
+</script>
+<script type='text/javascript' src="https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js"></script>
+<script type='text/javascript' src="UnityObject2.js"></script>
+
+</polymer-element>

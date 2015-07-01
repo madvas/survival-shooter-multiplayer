@@ -21,8 +21,13 @@ body {
 .cover-wrap {
   padding: 10px !important;
   height: auto!important;
+  width: 960px !important;
 }
 
 .cover-bg {
   width: 100%;
+}
+
+#ChromeMissingUnityPlayer {
+  width: auto !important;
 }

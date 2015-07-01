@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>&lt;twitter-button&gt;</title>
+
+    <!-- Importing Web Component's Polyfill -->
+    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+
+    <!-- Importing Custom Elements -->
+    <link rel="import" href="src/twitter-button.html">
+  </head>
+
+  <body>
+    <twitter-button user="Web_Components" type="follow"></twitter-button>
+
+    <br><br>
+
+    <twitter-button user="Web_Components" type="share" hashtag="HelloWorld" text="This is my text!" href="http://www.nfl.com"></twitter-button>
+
+    <br><br>
+
+    <twitter-button type="hashtag" hashtag="HelloWorld" href="http://webcomponents.org" text="This is my text!"></twitter-button>
+
+    <br><br>
+
+    <twitter-button user="Web_Components" type="mention" text="Hello Everyone!"></twitter-button>
+  </body>
+</html>

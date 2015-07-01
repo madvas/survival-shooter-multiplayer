@@ -16,91 +16,100 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="Polymer Starter Kit"/>
-  <title>Polymer Starter Kit</title>
+  <meta name="generator" content="Survival Shooter Multiplayer"/>
+  <title>Survival Shooter Multiplayer</title>
+  <meta name="description" content="Cute web multiplayer realtime shooter game made with Unity3d">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
   <!-- Chrome for Android theme color -->
   <meta name="theme-color" content="#303F9F">
 
   <!-- Web Application Manifest -->
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="dist/manifest.json">
 
   <!-- Tile color for Win8 -->
   <meta name="msapplication-TileColor" content="#3372DF">
 
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Polymer Starter Kit">
-  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+  <meta name="application-name" content="Survival Shooter Multiplayer">
+  <link rel="icon" sizes="192x192" href="dist/images/touch/chrome-touch-icon-192x192.png">
 
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Polymer Starter Kit">
-  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Survival Shooter Multiplayer">
+  <link rel="apple-touch-icon" href="dist/images/touch/apple-touch-icon.png">
 
   <!-- Tile icon for Win8 (144x144) -->
-  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileImage" content="dist/images/touch/ms-touch-icon-144x144-precomposed.png">
 
-  <!-- build:css styles/main.css -->
+  <!-- build:css dist/styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild-->
 
-  <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+  <!-- build:js dist/bower_components/webcomponentsjs/webcomponents-lite.min.js -->
   <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
   <!-- endbuild -->
 
-  <!-- will be replaced with elements/elements.vulcanized.html -->
-  <link rel="import" href="elements/elements.html">
+  <!-- will be replaced with dist/elements/elements.vulcanized.html -->
+  <link rel="import" href="dist/elements/elements.html">
   <!-- endreplace-->
 
-
+  <script type='text/javascript'
+          src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
+  <script type="text/javascript">
+    <!--
+    var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+    if (document.location.protocol == 'https:')
+      unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+    document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+    -->
+  </script>
 </head>
 
 <body unresolved class="fullbleed layout vertical">
 <span id="browser-sync-binding"></span>
 <template is="dom-bind" id="app">
-
   <paper-header-panel mode="cover">
     <paper-toolbar class="tall">
     </paper-toolbar>
-      <section class="content cover" data-route="home">
-        <paper-material class="cover-wrap vertical layout" elevation="1" >
-          <img class="cover-bg" src="images/cover-bg.png" />
-          <div class="" style="height: 600px"></div>
-          <p class="">Press <b>V</b> to show scoreboard</br>
-          Press <b>B</b> to show settings</p>
-          <div class="horizontal layout">
-            <small>This game is modified version of tutorial game <i>Survival Shooter</i> made by
-              <a target="_blank" href="https://unity3d.com/learn/tutorials/projects/survival-shooter">Unity3D</a></small>
-            <span class="flex"></span>
-            <iframe src="https://ghbtns.com/github-btn.html?user=madvas&repo=multiplayer&type=star&count=true" frameborder="0" scrolling="0" width="60px" height="20px"></iframe>
-          </div>
-        </paper-material>
-      </section>
+    <section class="content cover" data-route="home">
+      <paper-material class="cover-wrap vertical layout" elevation="1">
+        <img class="cover-bg" src="dist/images/cover-bg.png"/>
+        <my-game></my-game>
+        <p class="">
+          Press <b>V</b> to show scoreboard</br>
+          Press <b>B</b> to show settings</br>
+          Right click on game screen for <i>Full screen</i>
+        </p>
+
+        <paper-share-facebook></paper-share-facebook>
+        <paper-share-twitter></paper-share-twitter>
+        <paper-share-google></paper-share-google>
+        <div class="horizontal layout">
+          <small>This game is modified version of tutorial game <i>Survival Shooter</i> made by
+            <a target="_blank" href="https://unity3d.com/learn/tutorials/projects/survival-shooter">Unity3D</a></small>
+          <span class="flex"></span>
+          <iframe src="https://ghbtns.com/github-btn.html?user=madvas&repo=multiplayer&type=star&count=true"
+                  frameborder="0" scrolling="0" width="60px" height="20px"></iframe>
+        </div>
+      </paper-material>
+    </section>
   </paper-header-panel>
-
-  <paper-toast id="caching-complete"
-               duration="6000"
-               text="Caching complete! This app will work offline.">
-  </paper-toast>
-
-  <platinum-sw-register auto-register
-                        clients-claim
-                        skip-waiting
-                        on-service-worker-installed="displayInstalledToast">
-    <platinum-sw-cache default-cache-strategy="networkFirst"
-                       precache-file="precache.json">
-    </platinum-sw-cache>
-  </platinum-sw-register>
-
 </template>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src   = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
   ga('create', 'UA-21191392-8', 'auto');
   ga('send', 'pageview');
