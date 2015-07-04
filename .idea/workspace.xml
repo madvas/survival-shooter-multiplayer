@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ae12548-3b5c-4ebe-acaf-cb626a34b3bf" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/elements/my-greeting/my-greeting.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/elements/my-list/my-list.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/matus.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/polymer_starter_node_modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/survival-shooter-multiplayer-web.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/webResources.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/build.unity3d" afterPath="$PROJECT_DIR$/build/build.unity3d" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/elements/my-game/my-game.html" afterPath="$PROJECT_DIR$/app/elements/my-game/my-game.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="polymer-starter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,8 +104,8 @@
       <file leaf-file-name="my-game.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/elements/my-game/my-game.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7960309">
-              <caret line="102" column="71" selection-start-line="102" selection-start-column="71" selection-end-line="102" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.5711136">
+              <caret line="90" column="34" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -504,7 +516,13 @@
       <option name="project" value="LOCAL" />
       <updated>1436028659341</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="new game version - pickup items">
+      <created>1436028897841</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1436028897841</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -949,8 +967,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/elements/my-game/my-game.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7960309">
-          <caret line="102" column="71" selection-start-line="102" selection-start-column="71" selection-end-line="102" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.5711136">
+          <caret line="90" column="34" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
           <folding />
         </state>
       </provider>
